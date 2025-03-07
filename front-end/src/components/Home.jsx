@@ -2,6 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlaneArrival, faPlaneDeparture } from '@fortawesome/free-solid-svg-icons';
 import { faCalendar } from '@fortawesome/free-regular-svg-icons';
+import Footer from './Footer';
 function Home() {
   return (
     <div className='font-istok'>
@@ -34,8 +35,12 @@ function Home() {
                 <button className='text-white md:text-blue-800 md:hover:text-white  font-bold border-2 border-[#1158C2] bg-[#1158C2] md:bg-transparent hover:bg-[#1158C2]  px-9 py-3 rounded-xl shadow-md'>Search</button>
             </form>
       </header>
+      <main className='p-5 lg:p-8'>
+        contnet of hame page
+      </main>
+      <Footer/>
     </div>
   )
 }
 
-export default Home
+export default Home;
