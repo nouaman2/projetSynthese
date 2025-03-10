@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { setInfoTrip } from '../actions';
 
@@ -7,9 +7,21 @@ function Passengers() {
     const dispatch = useDispatch();
     const  infoTrip = useSelector((state)=>state.infoTrip);
     const { nbrAdults,nbrChildren,nbrInfants } = infoTrip;
+    function togglePassengersDropDown(e) {
+        e.stopPropagation();
+        setIsPessengersBoxOpen(!isPessengersBoxOpen);
+    }
+    useEffect(()=>{
+        const closeOutsideDropDownBox = () => {
+            setIsPessengersBoxOpen(false)
+          };
+      
+          document.addEventListener('click', closeOutsideDropDownBox);
+          return () => document.removeEventListener('click', closeOutsideDropDownBox);
+    },[isPessengersBoxOpen])
   return (
     <div className="passengers-box w-full sm:w-80 relative">
-        <div onClick={()=>setIsPessengersBoxOpen(!isPessengersBoxOpen)} className='border w-full px-5 py-3 text-lg bg-white text-gray-600 cursor-pointer' style={isPessengersBoxOpen?{borderTopLeftRadius:'10px',borderTopRightRadius:'10px'}:{borderRadius:'10px'}}>
+        <div onClick={(e)=>togglePassengersDropDown(e)} className='border w-full px-5 py-3 text-lg bg-white text-gray-600 cursor-pointer' style={isPessengersBoxOpen?{borderTopLeftRadius:'10px',borderTopRightRadius:'10px'}:{borderRadius:'10px'}}>
             {`${nbrAdults} ${nbrAdults>1 ?"Adults":"Adult"}, ${nbrChildren} ${nbrChildren>1 ?"Childs":"Child"} , ${nbrInfants} ${nbrInfants>1 ?"Infants":"Infant"}`}
             </div>
         {isPessengersBoxOpen &&
