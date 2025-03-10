@@ -53,6 +53,7 @@ const [frequentlyQuestions, setFrequentlyQuestions] = useState([
 
 const flights = [
   {
+      id:1,
       airline: "Air France",
       logo: "https://transvelo.github.io/mytravel-html/assets/img/90x90/img1.png",
       heure_depart: "08:30",
@@ -65,6 +66,7 @@ const flights = [
   },
   
   {
+    id:2,
       airline: "Emirates",
       logo: "https://transvelo.github.io/mytravel-html/assets/img/90x90/img2.png",
       heure_depart: "22:15",
@@ -76,6 +78,7 @@ const flights = [
       type :'Economy'
   },
   {
+      id:3,
       airline: "Qatar Airways",
       logo: "https://transvelo.github.io/mytravel-html/assets/img/90x90/img5.png",
       heure_depart: "12:00",
@@ -87,6 +90,7 @@ const flights = [
       type :'Premuim Economy'
   },
   {
+      id:4,
       airline: "Lufthansa",
       logo: "https://transvelo.github.io/mytravel-html/assets/img/90x90/img4.png",
       heure_depart: "06:45",
@@ -98,6 +102,7 @@ const flights = [
       type :'First class'
   },
   {
+      id:5,
       airline: "Turkish Airlines",
       logo: "https://transvelo.github.io/mytravel-html/assets/img/90x90/img3.png",
       heure_depart: "20:00",
