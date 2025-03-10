@@ -23,7 +23,7 @@ function Footer() {
             </div>
             <div className="w-full md:w-1/4">
                 <h3 className="text-lg font-semibold mb-2.5">Customer Support</h3>
-                <p><FontAwesomeIcon icon={faPhone}/> +212 6 22 15 34 88</p>
+                <p><FontAwesomeIcon icon={faPhone}/> +212 45 45 05 57</p>
                 <p className='my-2'><FontAwesomeIcon icon={faEnvelope}/> support@easyfly.com</p>
                 <p><FontAwesomeIcon icon={faMapMarkerAlt}/> sidi youssef ben alli dr dlam ,marrakech</p>
             </div>
