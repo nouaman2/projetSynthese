@@ -16,9 +16,9 @@ function Footer() {
                 <h3 className="text-lg font-semibold mb-2">Quick Links</h3>
                 <ul>
                     <li className="cursor-pointer hover:text-teal-400"><Link to={'/'}>Home</Link></li>
-                    <li className="cursor-pointer hover:text-teal-400"><Link to={'/contact-us'}>Contact Us</Link></li>
+                    <li className="cursor-pointer hover:text-teal-400"><Link to={'/contact'}>Contact Us</Link></li>
                     <li className="cursor-pointer hover:text-teal-400"><Link to={'/about'}>About us</Link></li>
-                    <li className="cursor-pointer hover:text-teal-400"><Link to={'/reservation'}>Reservation</Link></li>
+                    <li className="cursor-pointer hover:text-teal-400"><Link to={'/flights'}>Reservation</Link></li>
                 </ul>
             </div>
             <div className="w-full md:w-1/4">

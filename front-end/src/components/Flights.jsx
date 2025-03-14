@@ -7,33 +7,14 @@ import Passengers from './Passengers';
 import { setInfoTrip } from '../actions';
 import { Link } from 'react-router-dom';
 
-function Reservation() {
+function Flights() {
     const [nbrElementsToShow , setNbrElementsToShow] = useState({airline:4, stops: 3, type:4});
     const flights = useSelector((state)=>state.flights);
     const  infoTrip = useSelector((state)=>state.infoTrip);
   const {type:typeTrip,from,to,date_depart,date_Arrive} = infoTrip;
   const dispatch = useDispatch();
-    // function getDurationOfFlight(startTime, endTime) {
-    //     const [startHours, startMinutes] = startTime.split(":").map(Number);
-    //     const [endHours, endMinutes] = endTime.split(":").map(Number);
-    
-    //     let start = startHours * 60 + startMinutes;
-    //     let end = endHours * 60 + endMinutes;
-
-    //     if (end < start) {
-    //         end += 24 * 60;
-    //     }
-    
-    //     let diff = end - start;
-    //     let hours = Math.floor(diff / 60);
-    //     let minutes = diff % 60;
-    
-    //     return { hours, minutes };
-    // }
     const minPrice = getMinAndMaxValue('price').min ;
     const maxPrice = getMinAndMaxValue('price').max ;
-    // const minDuration = Math.min(...getMinAndMaxDuration()) ;
-    // const maxDuration = Math.max(...getMinAndMaxDuration()) ;
     
     const [filters, setFilters] = useState({
         stops: [],
@@ -93,8 +74,8 @@ function Reservation() {
                     <div className='type-route flex  items-center gap-5'>
                         <div className="title capitalize text-2xl font-semibold">choose your Route</div>
                         <div className='text-xl flex gap-10 sm:gap-14'>
-                            <div className='flex items-center'><input type="radio" name="route" id="one-way" value={'one-way'} className='mr-2 w-5 h-5' onChange={(e)=>dispatch(setInfoTrip({type:e.target.value}))}/>One-way</div>
-                            <div className='flex items-center'><input type="radio" name="route" id="Round-Trip" value={'round-trip'} checked={typeTrip==='round-trip' ? true : false} className='mr-2 w-5 h-5' onChange={(e)=>dispatch(setInfoTrip({type:e.target.value}))}/>Round Trip</div>
+                            <div className='flex items-center'><input type="radio" name="route" id="one-way" value={'one-way'} className='mr-2 w-5 h-5' onChange={(e)=>dispatch(setInfoTrip({type:e.target.value}))}/><label htmlFor='one-way'>One-way</label></div>
+                            <div className='flex items-center'><input type="radio" name="route" id="Round-Trip" value={'round-trip'} checked={typeTrip==='round-trip' ? true : false} className='mr-2 w-5 h-5' onChange={(e)=>dispatch(setInfoTrip({type:e.target.value}))}/><label htmlFor='Round-Trip'>Round Trip</label></div>
                         </div>
                     </div>
                     <div className="passengers justify-between flex items-center">
@@ -244,4 +225,4 @@ function Reservation() {
   )
 }
 
-export default Reservation;
+export default Flights;

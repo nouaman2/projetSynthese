@@ -160,8 +160,8 @@ useEffect(()=>{
                     <div className='type-route flex flex-col items-center gap-2'>
                         <div className="title capitalize text-2xl font-semibold">choose your Route</div>
                         <div className='text-xl flex gap-10 sm:gap-14'>
-                            <div className='flex items-center'><input type="radio" name="route" id="one-way" value={'one-way'} className='mr-2 w-5 h-5' onChange={(e)=>dispatch(setInfoTrip({type:e.target.value}))}/>One-way</div>
-                            <div className='flex items-center'><input type="radio" name="route" id="Round-Trip" value={'round-trip'} checked={typeTrip==='round-trip' ? true : false} className='mr-2 w-5 h-5' onChange={(e)=>dispatch(setInfoTrip({type:e.target.value}))}/>Round Trip</div>
+                            <div className='flex items-center'><input type="radio" name="route" id="one-way" value={'one-way'} className='mr-2 w-5 h-5' onChange={(e)=>dispatch(setInfoTrip({type:e.target.value}))}/><label htmlFor='one-way'>One-way</label></div>
+                            <div className='flex items-center'><input type="radio" name="route" id="Round-Trip" value={'round-trip'} checked={typeTrip==='round-trip' ? true : false} className='mr-2 w-5 h-5' onChange={(e)=>dispatch(setInfoTrip({type:e.target.value}))}/><label htmlFor='Round-Trip'>Round Trip</label></div>
                         </div>
                     </div>
                     <div className="passengers flex flex-col sm:items-center gap-2">
